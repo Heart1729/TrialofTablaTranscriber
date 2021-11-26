@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<style>
+body {
+  background-image: url('BackgroundImg.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+form {
+    margin:auto;
+    width:35%;
+}
+
+.result {
+    margin: auto;
+    width: 35%;
+    border: 1px solid #ccc;
+}
+</style>
+
+<head>
+<title>Tabla Transcriber</title>
+</head>
+
+<body>
+
+<p style="text-align:center;font-size:30px;font-family:garamond">Let's See Your Music First!</p>
+
+<form action="{{ url_for('main') }}" method="POST">
+    <fieldset>
+        <legend>Upload Your File Here:</legend>
+	
+	<br>
+	<input name="audio" type="file" accept="audio/wav" id="audioFile" required/>
+        <br>
+
+        <br> <input type="submit" value="Predict Audio!"">
+    </fieldset>
+</form>
+<br>
+
+<p style="text-align:center;font-size:30px;font-family:garamond">Your Prediction Should Be Visible Below</p>
+
+<div class="result" align="center">
+        <p style="text-align:left;font-size:25px;font-family:garamond">{{ prediction }}</p>  
+	<p style="text-align:center;font-size:35px;font-family:garamond">{{ prediction_name }}</p>
+
+</div>
+
+</body>
+</html>
