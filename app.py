@@ -61,6 +61,7 @@ def main():
     
     if flask.request.method == 'POST':
         audio = flask.request.form['audio']
+        print(type(audio))
         prediction, prediction_name = predict_audio(audio)
         return flask.render_template('main.html',
                                      prediction="This music sounds "+prediction+"% like:",
