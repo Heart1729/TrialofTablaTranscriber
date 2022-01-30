@@ -6,7 +6,7 @@ import csv
 import librosa
 import tensorflow as tf
 print('library imported')
-model = tf.keras.models.load_model('model\TTM_model.h5')
+model = tf.keras.models.load_model('TTM_model.h5')
 model.summary()
 
 def predict_audio(audio):
