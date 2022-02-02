@@ -2,7 +2,3 @@ numpy
 pandas
 librosa
 tensorflow
-flask
-gunicorn
-xgboost
-csv
